@@ -150,6 +150,8 @@ class BrokerNode(threading.Thread):
 
 
 class WorkerClass():
+    """The broker creates a number of workers and invokes their route method upon request.
+    """
 
     def __init__(self, name, context):
         self.__name = name
