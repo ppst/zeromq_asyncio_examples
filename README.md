@@ -16,7 +16,7 @@ Example Python classes distributing work using ZeroMQ and asyncio
 
 In the first example (*zmq_asyncio_example_1.py*), a main routine acts as a client that starts up
 a *broker* object in a separate thread. The broker binds to several ØMQ sockets for communication
-with *workers* and main requests. It also starts a number of *worker* objects. Broker and workers
+with *workers* and main routine. It also starts a number of *worker* objects. Broker and workers
 run in separate threads with their own asyncio event loops on which they poll and process messages.
 
 Broker and worker nodes terminate when a stop signal is sent via ØMQ pair sockets from the main
@@ -35,7 +35,7 @@ the original request sender via the other ØMQ router socket.
 
 In the second example (*zmq_asyncio_example_2.py*), a main routine acts as a client that starts up
 a *broker* object in a separate thread. The broker binds to several ØMQ sockets for communication
-with *workers* and main requests. It also starts a number of *worker* objects as well as a number of
+with *workers* and main routine. It also starts a number of *worker* objects as well as a number of
 asyncio event loops. On one of the event loops the broker polls ØMQ sockets and processes messages.
 The other event loops are assigned to separate threads and execute requests directed at workers.
 
